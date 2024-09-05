@@ -46,7 +46,7 @@ class BrowserSessionAuthentication:
     def _load_session(self) -> httpx.Cookies | None:
         """Last inn autentiserings sesjons cookie.
 
-        Hvis `SESSION_COOKIE_NAME` ikke finnes returneres `None`.
+        Hvis ingen cookies finnes for `self.base_url` returneres `None`.
         """
         if self.browser_type and hasattr(browser_cookie3, self.browser_type):
             cookie_method = getattr(browser_cookie3, self.browser_type)
@@ -66,6 +66,10 @@ class BrowserSessionAuthentication:
     def _check_session(self) -> bool:
         """Sjekk om det finnes en aktiv sesjon eller om bruker må reautentisere."""
         self.client.cookies = self._load_session()
+        # Hvis det ikke finnes noen cookies så avbryter vi tidlig og ber om
+        # reautentisering
+        if self.client.cookies is None:
+            return False
         resp = self.client.get("/oauth2/session")
         # Hvis vi får 401 betyr det at det ikke finnes en sesjon eller at den
         # har utløpt, 302 indikerer at siden ønsker å videresende oss til
@@ -82,9 +86,9 @@ class BrowserSessionAuthentication:
                 minutes=5
             ) < datetime.datetime.now(ends_at.tzinfo):
                 return False
-            # Hvis vi kommer hit må vi passe på at sesjonen finnes i en
-            # nettleser mellomlagring
-            return self._load_session() is not None
+            # Siden vi må være autentisert for å kommunisere med
+            # `/oauth2/session` så kan vi her returnere suksess
+            return True
         else:
             raise RuntimeError(
                 "Fikk ukjent status fra '/oauth2/session' grensesnitt: "
@@ -102,17 +106,23 @@ class BrowserSessionAuthentication:
         """Hent sesjons header ved å be bruker om å autentisere med nettleser."""
         if not self._check_session():
             self._request_auth()
+            # Vi venter litt etter hver gang vi sjekker slik at bruker rekker å
+            # autentisere før vi avbryter, dette gjøres ved å telle opp
+            # `num_refresh` kombinert med `time.sleep`
             num_refresh = 0
-            while True:
+            while not self._check_session():
+                time.sleep(5)  # Vent litt slik at bruker rekker å autentisere
                 num_refresh += 1
-                if self._check_session():
-                    return self._load_session()
-                elif num_refresh > 2:
-                    raise TimeoutError("Klarte ikke å laste sesjonstoken")
-                time.sleep(5)
-        session = self._load_session()
-        assert session, "Det finnes en aktiv sesjon, men den kunne ikke lastes!"
-        return session
+                if num_refresh > 20:
+                    raise TimeoutError(
+                        f"Klarte ikke å laste cookies for {self.base_url}"
+                        f" fra {self.browser_type}"
+                    )
+            return self.client.cookies
+        # Hvis kallet over til `_check_session` returnerte True vil cookies være
+        # satt på HTTP klienten, disse vil også være autentisert mot
+        # `/oauth2/session` så vi vet at de fungerer
+        return self.client.cookies
 
     def __call__(self) -> httpx.Cookies:
         """Hent autentiseringstoken som en header (samme som `get_session`)."""
