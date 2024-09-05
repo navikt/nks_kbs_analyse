@@ -1,4 +1,4 @@
-# Analyse verktøy for å jobbe med NKS Bob
+# Analyseverktøy for å jobbe med NKS Bob
 
 Dette prosjektet inneholder verktøy for å jobbe med NKS Bob
 ([`nks_vdb`](https://github.com/navikt/nks_vdb) og
