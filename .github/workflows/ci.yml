@@ -1,0 +1,34 @@
+name: CI
+on:
+    push:
+        branches: [main]
+    pull_request:
+    workflow_dispatch:
+        # Tillat at man manuelt starter jobber på Github
+env:
+    FORCE_COLOR: "1"
+jobs:
+    lint:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - name: Set up Python
+              uses: actions/setup-python@v5
+              with:
+                python-version: "3.12"
+            - name: Run pre-commit
+              uses: pre-commit/action@v3.0.1
+    # MERK: Vi kan ikke kjøre tester i CI enda da det bare finnes interaktive
+    # tester som krever bruker. Hvis alle testene til PyTest hoppes over
+    # returnerer den -1.
+
+    # test:
+    #     runs-on: ubuntu-latest
+    #     steps:
+    #         - uses: actions/checkout@v4
+    #         - name: Set up uv
+    #           run: curl -LsSf https://astral.sh/uv/0.4.0/install.sh | sh
+    #         - name: Install the project
+    #           run: uv sync --frozen --all-extras --dev
+    #         - name: Run tests
+    #           run: uv run pytest -rs -m 'not interactive'
