@@ -27,8 +27,16 @@ def test_authentication(url: HttpUrl) -> None:
     cookie = auth.get_cookie()
     print(cookie)
     assert cookie, f"Klarte ikke å autentisere mot: {url!s}"
-    # response = httpx.get(str(url) + "oauth2/session", cookies=cookie)
-    # assert response.status_code == 200, f"Fikk ikke tak i sesjonsinformasjon {response.request}"
+    response = httpx.get(str(url) + "oauth2/session", cookies=cookie)
+    assert (
+        response.status_code == 200
+    ), f"Fikk ikke tak i sesjonsinformasjon {response.request}"
+    data = response.json()
+    assert "session" in data, "Virker ikke som gyldig sesjonsinformasjon"
+    assert data["session"]["active"], "Sesjon er ikke aktiv"
+    assert (
+        data["session"]["ends_in_seconds"] >= 5 * 60
+    ), "Forventer at sesjon slutter om mer enn 5 minutter"
 
 
 @pytest.mark.interactive
