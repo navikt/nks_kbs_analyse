@@ -49,13 +49,13 @@ def test_num_documents(retriever: NKSRetriever) -> None:
 )
 @pytest.mark.interactive
 def test_semantic_search(retriever: NKSRetriever, query: str) -> None:
-    """Sjekk at semantisksøk gir `SemanticSimilairy` økende."""
+    """Sjekk at semantisksøk gir `SemanticSimilairy` voksende."""
     docs = retriever.invoke(query, fts_weight=0.0)
     for first, second in zip(docs, docs[1:]):
         assert (
             first.metadata["SemanticSimilarity"]
             >= second.metadata["SemanticSimilarity"]
-        ), "Forventer at semantisklikhet er strengt økende"
+        ), "Forventer at semantisklikhet er voksende"
 
 
 @pytest.mark.interactive
