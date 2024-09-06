@@ -30,9 +30,6 @@ class BrowserSessionAuthentication:
     client: httpx.Client
     """HTTP klient for mellomlagring av tilkoblinger"""
 
-    browser: webbrowser.BaseBrowser
-    """Kobling for å interagere med brukeren sin nettleser"""
-
     browser_type: BrowserType | None
     """Typen nettleser - brukes for å hente cookies fra riktig nettleser"""
 
@@ -43,7 +40,6 @@ class BrowserSessionAuthentication:
         """Lag et nytt autentiseringsobjekt som autentiserer for `base_url`."""
         self.base_url = httpx.URL(str(base_url))
         self.client = httpx.Client(base_url=self.base_url)
-        self.browser = webbrowser.get(browser)
         self.browser_type = browser
 
     def _load_session(self) -> httpx.Cookies | None:
@@ -114,14 +110,13 @@ class BrowserSessionAuthentication:
     def _request_auth(self) -> bool:
         """Få brukeren til å autentisere seg med en browser."""
         # Åpne nettleserfane for brukeren og diriger dem til login endepunkt
-        return self.browser.open(
-            str(self.base_url.copy_with(path="/oauth2/login")), new=2
-        )
+        return webbrowser.open(str(self.base_url.copy_with(path="/oauth2/login")))
 
     def get_cookie(self) -> httpx.Cookies:
         """Hent sesjons header ved å be bruker om å autentisere med nettleser."""
         if not self._check_session():
-            self._request_auth()
+            if not self._request_auth():
+                raise RuntimeError(f"Klarte ikke åpne nettleser {self.browser_type}")
             # Vi venter litt etter hver gang vi sjekker slik at bruker rekker å
             # autentisere før vi avbryter, dette gjøres ved å telle opp
             # `num_refresh` kombinert med `time.sleep`
