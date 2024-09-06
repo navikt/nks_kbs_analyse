@@ -36,6 +36,9 @@ class BrowserSessionAuthentication:
     browser_type: BrowserType | None
     """Typen nettleser - brukes for å hente cookies fra riktig nettleser"""
 
+    ends_at: datetime.datetime | None = None
+    """Når går sesjonen ut på dato"""
+
     def __init__(self, base_url: HttpUrl, browser: BrowserType | None = None):
         """Lag et nytt autentiseringsobjekt som autentiserer for `base_url`."""
         self.base_url = httpx.URL(str(base_url))
@@ -63,8 +66,20 @@ class BrowserSessionAuthentication:
             return result
         return None
 
+    @property
+    def cached(self) -> bool:
+        """Finnes det mellomlagret cookie."""
+        return self.ends_at is not None and len(self.client.cookies) > 0
+
     def _check_session(self) -> bool:
         """Sjekk om det finnes en aktiv sesjon eller om bruker må reautentisere."""
+        if self.cached:
+            assert self.ends_at is not None
+            now = datetime.datetime.now(self.ends_at.tzinfo)
+            # Sjekk om mellomlagret cookie er gyldig 5 minutter frem i tid, hvis
+            # ikke så prøver vi å laste inn på nytt med logikken under
+            if self.ends_at - datetime.timedelta(minutes=5) > now:
+                return True
         self.client.cookies = self._load_session()
         # Hvis det ikke finnes noen cookies så avbryter vi tidlig og ber om
         # reautentisering
@@ -88,6 +103,7 @@ class BrowserSessionAuthentication:
                 return False
             # Siden vi må være autentisert for å kommunisere med
             # `/oauth2/session` så kan vi her returnere suksess
+            self.ends_at = ends_at
             return True
         else:
             raise RuntimeError(
