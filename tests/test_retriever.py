@@ -5,6 +5,7 @@ from typing import cast
 
 import pytest
 from pydantic_core import Url
+from pytest_benchmark.fixture import BenchmarkFixture
 
 from nks_kbs_analyse.auth import BrowserSessionAuthentication, BrowserType
 from nks_kbs_analyse.retriever import NKSRetriever
@@ -35,3 +36,11 @@ def test_num_documents(retriever: NKSRetriever) -> None:
     assert len(docs) == retriever.k
     docs = retriever.invoke("Hva er sykepenger?", k=3)
     assert len(docs) == 3
+
+
+@pytest.mark.interactive
+def test_nks_bench(benchmark: BenchmarkFixture, retriever: NKSRetriever) -> None:
+    """Test hvor rask NKS VDB fungerer."""
+    docs = benchmark(retriever.invoke, "Hva er dagpenger?")
+    assert docs
+    assert len(docs) == retriever.k
