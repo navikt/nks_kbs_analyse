@@ -45,11 +45,16 @@ class NKSRetriever(BaseRetriever):
         """Hent dokumenter fra NKS VDB."""
         self.conn.cookies = self.auth.get_cookie()
         # Bygg spørring til NKS-VDB
-        params = {"query": query, "num_results": str(kwargs.get("k", self.k))}
+        params = {
+            "query": query,
+            "num_results": str(kwargs.get("k", self.k)),
+            "fts_weight": str(kwargs.get("fts_weight", 1.0)),
+            "semantic_weight": str(kwargs.get("semantic_weight", 1.0)),
+        }
         # Kjør spørring
         response = self.conn.get(
             url="/api/v1/search",
             params=params,
-            timeout=20.0,
+            timeout=kwargs.get("timeout", 20.0),
         ).raise_for_status()
         return _convert_response_docs(response.json())
