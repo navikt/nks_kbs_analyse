@@ -38,6 +38,26 @@ def test_num_documents(retriever: NKSRetriever) -> None:
     assert len(docs) == 3
 
 
+@pytest.mark.parametrize(
+    "query",
+    [
+        "Hva er dagpenger?",
+        "Hva er sykepenger?",
+        "Hva er samordning mellom dagpenger og sykepenger?",
+        "test",
+    ],
+)
+@pytest.mark.interactive
+def test_semantic_search(retriever: NKSRetriever, query: str) -> None:
+    """Sjekk at semantisksøk gir `SemanticSimilairy` økende."""
+    docs = retriever.invoke(query, fts_weight=0.0)
+    for first, second in zip(docs, docs[1:]):
+        assert (
+            first.metadata["SemanticSimilarity"]
+            >= second.metadata["SemanticSimilarity"]
+        ), "Forventer at semantisklikhet er strengt økende"
+
+
 @pytest.mark.interactive
 def test_nks_bench(benchmark: BenchmarkFixture, retriever: NKSRetriever) -> None:
     """Test hvor rask NKS VDB fungerer."""
