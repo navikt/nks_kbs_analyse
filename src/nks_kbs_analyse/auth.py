@@ -76,10 +76,10 @@ class BrowserSessionAuthentication:
             # ikke så prøver vi å laste inn på nytt med logikken under
             if self.ends_at - datetime.timedelta(minutes=5) > now:
                 return True
-        self.client.cookies = self._load_session()
+        self.client.cookies.update(self._load_session())
         # Hvis det ikke finnes noen cookies så avbryter vi tidlig og ber om
         # reautentisering
-        if self.client.cookies is None:
+        if len(self.client.cookies) < 1:
             return False
         resp = self.client.get("/oauth2/session")
         # Hvis vi får 401 betyr det at det ikke finnes en sesjon eller at den
