@@ -25,6 +25,7 @@ repos:
         additional_dependencies: [
           'langchain_core',
           'pydantic',
+          'pydantic_settings',
           'pytest',
           'types-python-dateutil',
         ]
