@@ -21,6 +21,7 @@ notebook = [
     "pandas>=2.2.2",
     "plotly>=5.24.0",
     "rich>=13.8.0",
+    "ipykernel>=6.29.5",
 ]
 azure-search = [
     "azure-identity>=1.17.1",
