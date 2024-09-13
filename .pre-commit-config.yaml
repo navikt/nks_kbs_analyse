@@ -23,9 +23,12 @@ repos:
         types: [python]
         args: [--strict, --ignore-missing-imports]
         additional_dependencies: [
+          'httpx',
           'langchain_core',
           'pydantic',
+          'pydantic_settings',
           'pytest',
+          'typer',
           'types-python-dateutil',
         ]
   - repo: https://github.com/kynan/nbstripout
