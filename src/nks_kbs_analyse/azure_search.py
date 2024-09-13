@@ -1,7 +1,5 @@
 """Funksjoner for å laste/fjerne dokumenter i Azure Search."""
 
-from typing import Any, Iterator
-
 from azure.search.documents.indexes.models import (
     SearchableField,
     SearchField,
@@ -14,12 +12,6 @@ from langchain_core.vectorstores import VectorStore
 from .embeddings import get_embedding
 from .knowledgebase import METADATA_COLUMNS
 from .settings import settings
-
-
-def batch_list(input_list: list[Any], batch_size: int = 500) -> Iterator[list[Any]]:
-    """Hjelpemetode for å batche dokumententer i mindre lister."""
-    for i in range(0, len(input_list), batch_size):
-        yield input_list[i : i + batch_size]
 
 
 class ExtendedVectorStore(VectorStore):
