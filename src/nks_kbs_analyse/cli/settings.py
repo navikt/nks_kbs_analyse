@@ -12,6 +12,7 @@ class Settings(BaseSettings):
         env_file=".env",
         env_file_encoding="utf-8",
         env_nested_delimiter="__",
+        extra="ignore",
     )
 
     vdb_url: HttpUrl = Field("https://nks-vdb.ansatt.dev.nav.no")
