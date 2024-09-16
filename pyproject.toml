@@ -22,6 +22,8 @@ notebook = [
     "plotly>=5.24.0",
     "rich>=13.8.0",
     "ipykernel>=6.29.5",
+    "langchain-openai>=0.1.23",
+    "ipywidgets>=8.1.5",
 ]
 azure-search = [
     "azure-identity>=1.17.1",
