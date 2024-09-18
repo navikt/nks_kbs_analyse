@@ -1,0 +1,928 @@
+Abonnement	Subscripton
+Adgangsbegrensning	Restricted admission
+Administrasjon	Admistration
+Adopsjonsbevilling	Adoption order
+Adopsjonsbevis	Adoption certificate
+Adoposjonspenger	Parental benefit on adoption
+Adoptivbarn	Adopted child
+Adresse	Address
+AFP - avtalefestet pensjon	Contractual pension
+Akademiker	University/college teacher
+Akkordarbeider	Piece worker, employee on piece rate pay
+Akkordlønn	Piece rate pay, payment by results
+Akkordsystem	Piece rate pay system
+Akkordtillegg	Pieceworker's bonus
+Aksjeselskap	Limited company, joint-stock company
+Aktivitetsplan	Activity plan
+Aktivitetsplikt	Duty to act
+Aktualisering av data	Updating of data
+Alder	Age
+Alderspensjon	Retirement pension
+Allmenn	General
+Analyse	Analysis
+Anbefalning	Recommendation
+Annleggsområde	Building site
+Annonsere	Advertise
+Ansatt på prøve	Employed for a trial perioed
+Ansette	Employ, hire,
+Ansettelsesintervju	Job interview
+Ansettelsvilkår	Conditions of employment
+Ansenitet	Seniority
+Arbeiderbevegelsen 	Labour movement
+Arbeidsavklaringspenger  	Work assessment allowance
+Arbeidsavtale	Employment contract
+Arbeidsevne	Ability to work
+Arbeidsevnevurdering	Work ability assessment
+Arbeidsgiver	Employer
+Arbeidsgiveravgift	Employer's national insurance contribution
+Arbeidsgiverforening	Employer's associtaion
+Arbeidsgiverperiode	Employer`s obligation period to pay sickness benefit
+Arbeidsinntekt	Income
+Arbeidskraft 	Labour force
+Arbeidsledig	Unemployed
+Arbeidsmarked	Job market
+Arbeidsmarkedsloven	Act of 10 December 2004 no. 76 relating to Labour Market Services (Labour Market Act)
+Arbeidsmiljø	Working environment
+Arbeidsmiljøloven	Working Environment Act
+Arbeidsrett	Labour Law
+Arbeidssøker	Job seeker
+Arbeidstaker 	Employee
+Arbeidstid	Working hours
+Arbeidstillatelse	Work permit
+Arbeidstilsynet	Norwegian Labour Inspection Authority
+Arbeidsufør	Occupationally disabled
+Arbeidsvilkår	Working conditions
+Asylsøker	Asylum seeker
+Attest	Certificate
+Autoriasjon	Authorization
+Avklaring	Assessment
+Avklaringstiltak	Assessment measure
+Avskjedige 	Dismiss, fire
+Avskjedigelse	Dismissal
+Avslag	Rejection
+Avspasering	Time off in lieu
+Avtale	Agreement
+Avtalefestet pensjon (AFP) i offentlig sektor	Contractual pension in the public sector
+Avtalefestet pensjon (AFP) i privat sektor	Contractual pension in the private sector
+Avtalegiro	Direct debit
+Effektiviseringstiltak	Rationalisation schemes
+Egenaktivitet	Individual initiative
+Egenerklæring	Personal declaration
+Egen næring / virksomhet	Self-employment
+Egenbetaling	Patient co-payment
+Egenetablerer	Business start-up
+Egenmelding	Self-certification
+Ekstra betaling	Additional payment
+Ekstra småbarnstillegg	Extra infant supplementfor single parents
+Ekstrajobb  	Additional employment
+Ektefelle	Spouse
+Ektefellebidrag	Alimony
+Endring av bidrag	Reassessment of support
+Endringsdato	Change date
+Engangsbeløp	Lump sum
+Engangsstønad	Lump sum grant
+Engangsstønad ved adopsjon	Lump sum grant at adoption
+Engangsutgifter	Non-recurring expenses
+Engasjement	Temporary employment contract/limited contract
+Enkeltvedtak	Individual letter of decision
+Enkeltpersonsforetak	Sole proprietorship, sole proprietor company
+Enslig forsørger	Single parent
+Erstatning ved yrkesskade	Occupational injury compensation
+Etablere	Establish
+Etterbetaling	Back payment
+Ettergivelse	Debt: waiver, remission, write-off, cancellation
+Etterlattepensjon 	Survivor`s pension
+Etterlønn	Pay after termination of employment
+Etteroppgjør	Final annual settlement
+Evaluering	Evaluation, assessment
+EØS	EEA, European Economic Area
+EØS-borger	EEA citizen/citizen of an EEA member state
+Handel	Trade, Commerce
+Handlingsplan	Action plan
+Helge- og høytidsdager	Public holidays
+Helsefarlig arbeid	Hazardous work
+Helsemessige årsaker 	Health reasons
+Helsekort	Healt card
+Helsestasjon 	Parent and child clinic
+Helsetrygdekort	European helth insurance card
+Heltidspermittert 	(Totally) laid off
+Helårsdrift	Year-round operation
+Henlagt	Shelved, dismissed
+Henvise	Refer
+Hjelpemidler	Assistive technology
+Hjelpestønad	Assistance allowance
+Hjelpetiltak	Assistance programs
+hjemmekontor	Work at home, home office
+Honnørkort 	Concessionary card
+Honnørbillett	Concessionary ticket/ fare
+Hovedforsørger 	Main provider
+Hovedlønnstabell	Main pay table
+Hovedsammenslutning	Union Confederation
+Hovedtariffavtalen	Basic Collective Agreement
+Husleie	Rent
+Høringsdokument	Concultative document
+Høyere utdanning 	Higher education
+Kalenderår	Calendar year
+Kapitalinntekt	Invest income
+Karakter	Grade
+Karrieremuligheter	Career prospects
+Kjernetid	Core time
+Kjønnsdiskriminering 	Sex discrimination, gender inequality
+Klage 	Appeal / complaint
+Klageadgang	Right to appeal
+Klagerettigheter	Appeals (som tittel), (your right to) appeal
+Klient, bruker	User
+Kollega	Colleague
+Kommunal 	Municipal
+Kommune 	Local authority (etat), municipality (geografisk)
+Kommuneskatt	Municipal tax
+Kompensasjonstillegg	Compensation supplement
+Kompetanse	Knowlegde, qualifications, expertise
+Kompetanseheving 	Training, skill developement, upgrade qualifications
+Kompetansevurdering	Skills audit
+Konflikt	Conflict, dispute
+Kongelig resolusjon	Royal decree
+Konkurs	Bankrupt
+Konsumprisindeks 	Consumer price index
+kontaktperson	Contact person
+kontant betaling	Payment in cash, cash payment
+Kontantstøtte	Cash-for-Care Benefit (evt. Child care benefit)
+Kontantstøtte	Cash-for-Care Benefit Scheme(evt. Child care benefit Scheme)
+Konto 	Account
+Kontortid	Office hours
+Kontrakt 	Contract, agreement
+Kontroll	Verify
+Kontrollmyndighet 	Inspection authority
+Konvensjon	Convention
+Kopi	Copy
+Korrekturlesing	Proof reading
+Korttidskontrakt 	Short-term contacts
+Kortidsytelser	Short-term benefits
+Kost og losji 	Board and lodging
+Kostpenger/ kostgodtgjørelse	Subsistence allowance
+Krav	Claim
+Kravskjema	Claim form
+Kronetillegg 	Flat increase
+Kronisk syk person	Chronically ill person
+Kunde	costumer, user
+Kunnskapsdepartementet	Ministry of Education and Research
+Kvalifiseringsprogram	Qualification Programme
+Kvalifiseringsstønad 	Qualification benefit
+Kvalifiseringstiltak 	Qualification measures, training schemes
+Kvalifisert arbeidskraft	Skilled labour
+Kvalifiserte søkere	Qualified applicants
+Kvitteringskort	Receipt card
+Nattarbeid	Night work
+Nattillegg	Night allowance
+Nedsatt	Impaired, reduce
+Nedsatt arbeidsevne 	Impaired work capability
+Nettjeneste	Online service
+Normal arbeidstid	Normal working hours
+Notat	Memorandum
+NOU	Norwegian Offical Report
+Næringsoppgave	Income statement
+Næringsvirksomhet 	Commercial and industrial undertakings
+Nærmeste overordnede administrative ledd	Immediate superior administrative unit (enhet), immediate superior (person)
+Nødvendig	Necessary, mandatory, required, essential
+Realkompetanse 	Accumulated skills
+Reallønn	Real wage
+Registreringsbevis	Registration certificate
+Reell arbeidssøker 	Genuine job seeker
+Redusert arbeidstid 	Reduced working hours
+Refusjon	Reimbursement / refund (kommer an på kontekst).
+Regelverk	Rules, set of rules, legislation
+Registrere	Register
+Registrering av kjøretøy	Registration of vehicles
+Registreringsnummer	Registration number
+Registrert partner 	Registreted partner
+Registert partnerskap	Registreted partnership
+Rehabilitering 	Rehabilitation
+Reise- og oppholdsdokumenter	Travel and subsistion benefit
+Regler	Rules
+Reisetid	Travelling time
+Reisetilskudd	Travel supplement
+Reisedokument 	Travel document
+Reisekostnader	Travel expenses
+Resultatregnskap	Income statement
+Rekruttering	Recruitment
+Rekrutteringsavtale	Recruitment agreement, recruitment contract
+Rente	Interest
+Rentefradrag	Tax-deductible interest
+Resolusjon	Resolution
+Ressurssentre for ulike bransjer	Resource centres
+Retningslinjer	Guidelines
+Rett til å utøve sitt yrke	Right to practise ones`s profession
+Rettighet	Legal right
+Revisor	Auditor
+Revurdering	Reassessment
+Riktig oversettelse	Correct translation
+Rundskriv	Circular
+Råd	Advice
+Rådgivende overlege	Medical advisor
+Rådgivningstjeneste	Advisory service
+Ubeleilig arbeidstid	Unsocial working hours
+UDI (Utlendings-direktoratet)	Immigration Office
+Ufør  	Disabled
+Uføretrygd	Disability benefit
+Uførhet	Disability
+Ulykkesforsikring	Accident insurance
+Ulønnet arbeid	Unpaid work
+Underholdsbidrag	Maintenance support
+Underholdskostnad	Maintenance cost
+Underholdsplikt 	Duty to Maintain
+Underskrift	Signature
+Undervisning	Teaching
+Ungdom som forlater skolen 	Graduate (ferdig med skolen), drop out (fullfører ikke)
+Universitet	University
+Universitetseksamen	University exam
+Universitetsgrad	University degree
+Utbetaling	Payment
+Utbetalingsdato	Payment date
+Utbetaling av dagpenger	Payment of unemployment benefit
+Utdanning 	Education, training, schooling, studying, course
+Utdanningsnivå	Level of education
+Utdanningsstønad 	Education benefit
+Utenlandske arbeidere	Foreign workers
+Utestenging 	Exclusion
+Utgifter	Expences
+Utleie av arbeidskraft	Hiring-out of labour
+Utleie av vikarer	Hiring-out of temporary replacement
+Utleieservice for arbeidskraft	Labour hiring services
+Utlendingsdirektoratet	Norwegian Directorate of Immigrantion
+Utredning	Report, study
+Utsatt pensjon	Deferred pension
+Utsatte grupper (på arbeidsmarkedet)	Group with higher risk of unemployment
+Utskrift	Print-out
+Utstede, utsendt av 	Issue, issued by
+Uttaksgrad	Withdrawal rate
+Utvidet barnetrygd	Extended child benefit
+Utvidet tillegg	Extended benefit
+Utvise	Expel (skole), deport (utlendinger)
+Økonomisk sosialhjelp 	Financial assistance
+Økonomisk sosialhjelp i en nødssituasjon	Financial assistance in an emergency situation
+Øyeblikkelig hjelp	Immediate medical help
+Bankkonto	Bank account
+Barnebidrag 	Child support, child maintenance
+Barnehage	Kindergarten / Nursery
+Barnepass	Child care
+Barnepensjon	Children`s pension
+Barnepensjonister	Child pensioners
+Barnetillegg	Child supplement
+Barnetilsyn	Child Care benefit for working single parents
+Barnetrygd (ordinær)	Child benefit
+Barnetrygd (utvidet)	Extended child benefit
+Barnetrygdordningen	Child Benefit Scheme
+Barneverninstutisjon	Child care institution
+Bedriftsundersøkelse	Enterprise survey
+Begynnerlønn	Starting pay
+Behandle (en sak)	Process a case
+Behandlingstid	Processing time
+Beholdning av ledige stillinger	Total vacancies
+Bekreftelse	Confirmation
+Bemanning	Staffing
+Beregning	Calculation
+Bestride	Oppose
+Betalingsavtale	Payment arrangement
+Betalt ferie	Paid holiday
+Betingelser for å få dagpenger	Conditions for/entitlement to unemployment benefit
+Betvile	Doubt
+Bevilling	Licence
+Bidragsevne	Ability to pay child support
+Bidragsforskudd	Advance payments of child support
+Bidragsmottaker	Child support recipient
+Bidragspliktig	Child support debtor
+Bistand	Assistance
+Bolig	Residence, home, house, housing
+Borettslag	Housing co-operative
+Bortfall av inntekt	Loss of income
+Bortfallsregel	Lapse of benefit rule
+Bosatt	Resident, domiciled
+Bosted	Resident, place of residence
+Bostøtte	Housing allowance
+Bostyrer	Administrator
+Bransje	Trade, industry
+Bransjeavtale	Industry-wide agreement
+Brosjyre	Broschure, leaflet
+Brukergrupper 	User groups
+Brukermedvirkning	User involvement
+Budsjett	Budget
+Byggebransjen	Construction trade
+Fagarbeider	Skilled worker
+Fagforening 	Trade union
+Fagforeningavgift	Trade union dues
+Fagprøve	Trade examination
+Faktura	Invoice
+Farskap	Paternity
+Fast ansettelse	Permanent employment
+Fast bosted	Permanent residence
+Faste lønnstrekk	Regular supplements
+Faste trekk i bank	Fixed deductions from bank accounts
+Fedrekvote (fars permisjon)	Paternal quota (paternity leave)
+Feilutbetaling / for mye utbetalt 	Incorrect payment (wrong amount)
+Fellesperioden (foreldrepermisjon)	Shared period (of the parental leave)
+Ferie etter tariff	Doliday determined by a collective agreement
+Ferie med lønn	Paid holiday, vacation
+Feriejobb	Holiday job, vacation job
+Ferielønnstillegg	Holiday supplement
+Feriepenger 	Holiday pay
+Finansdepartementet	Ministry of finance
+Finansiering	Funding, financing
+Finnmarkstillegg	Finnmark supplement
+Fiskeri- og kystdepartementet	Ministry of Trade, Industry and Fisheries
+Fjernarbeid	Teleworking
+Fjernundervisning	Distance education
+Fleksibel arbeidstid	Flexible work hours
+Flyktning	Refugee
+Flytting	Relocation
+Folkehøyskole	Norwegian folk high school
+Folkeregisteret	National Population Register
+
+Folketrygd	National Insurance
+Folketrygdens grunnbeløp	National insurance basic amount
+Folketrygdloven	National Insurance Act
+Foreldrepenger	Parental benefit
+Foreldrepenger til far	Paternity benefit
+Foreldrepenger til mor	Maternity benefit
+Foreldrepermisjon	Parental leave
+Foretak	Enterprise
+Foretakregistreret	Register of Business Enterprises
+Forhåndsvarsel	Notice
+Forkjøpsrett	Preemtive right
+Forlenget ventetid 	Extended waiting period
+Formål	Purpose
+Forsikring	Insurance
+Forskrift	Regulations
+Forskudd	Advance
+Forskruttere	Pay in advance
+Forskruttering av ytelse	Advance payment of benefit
+Forskuddsskatt (for enkeltpersonforetak) 	Advance tax (for sole proprietorships)
+Fravær på grunn av sykdom	Abscence due to illness
+Frikort	Exemption card
+Friskmelding til arbeidsformidling (ingen offisiell oversettelse) 	If all options to get back to work have been attempted, you may receive sickness benefit for up to 12 weeks, while you are looking for a new job
+
+Fullmakt	Power of attorney
+Førsteside	Cover sheet
+I tilfelle sykdom 	In the event of illness
+Immigrasjon 	Innigration
+Incentiv	Incentive
+Indeksregulert lønn	Indexed wage
+Industriarbeider	Indistrial worker
+Informasjonsskranke 	Information desk
+Inkluderende arbeidsliv	Inclusive workplace
+Inkluderingstilskudd	Inclusive subsidy (for employers)
+Innenriks	Domestics
+Innføre	Introduce, import
+Innkalling	Notice of a meeting
+Innkrevingssentralen for bidrag og tilbakebetalingskrav	The Collection Agency for Child Support and Overpaid Benefits
+Innreise	Entry
+Innreisetillatelse 	Entry permit
+Innsats	Effort
+Innskrenkninger	Restrictions
+Innskriving 	Sign in, registration, enrolment
+Innskudd	Deposit
+Inntaksdato	Date of admission
+Inntekt 	Income
+Inntektsavhengig pensjon	Income-related pension
+Inntekstevne	Earning ability
+Inntekstgaranti	Income guarantee
+Inntektsmelding	Income report
+Inntektsopplysninger	Information about income
+Inntektsskatt 	Income tax
+Innvilget	Granted, approve
+Institusjon 	Instituion
+Integrasjon 	Integration
+Integrere	Integrate
+Intern informasjon	Internal information
+Intern samordning 	Internal coordination
+Internasjonale stillinger	International post, international posision
+Intervju	Interview
+Invaliditet	Incapacity to work, disability
+Lagerarbeider	Warehouse worker
+Lagmannsretten	Court of appeal
+Langtidsledige	Long-term unemployed
+Langtidsprognose 	Long-term forecast
+Langtidsytelse	Long-term benefit
+Lederstillinger 	Senior positions, management positions
+Ledig plass	Vacancy, job opening
+Ledige stillinger 	Vacancies / vacant positions
+Legat	Endowment grant, bequest
+Legeerklæring 	Medical certificate
+Legebehandling	Medical treatment
+Legehjelp	Medical assistance
+Legevakt	Accident and emergency unit
+Legitimasjon	Proof of identity, identification
+Leieavtale 	Lease agreement
+Levevilkår	Living conditions
+Likebehandling	equal treatment, non-discrimination
+Likestilling 	Gender equality (kjønn), equal opportunities (muligheter), equal rights (rettigheter)
+Lokalavdeling	Local branch
+Lov	Act
+Lov om barnetrygd	Child Benefit Act
+Lov om kontantstøtte	Cash-for-care benefit Act
+Lovbestemt ferie 	Statutory holiday
+Lovforslag	Bill
+Lovpålagt	Required by law
+Lærling 	Apprentice
+Lærlingkontrakt	Apprentice contract
+Lærlingplass	Apprenticeship
+Lærlingutdanning	Apprenticeship
+Lønn	Pay
+Lønnet arbeid 	Paid work
+Lønnsendring	Wage adjustment
+Lønnsforhøyelse	Pay rise
+Lønnsslipp 	Pay slip
+Lønnsplikt 	Obligation to pay wages
+Lønnsgaranti	Guarantee  pay
+Lønnsgarantiordningen	Wage guaranteescheme
+Lønnskrav	Wage claim
+Lønnsregulering	Pay adjustment
+Lønnsspenn	Pay range
+Lønnssystem	Pay system
+Lønnstabell	Pay system
+Lønnstilskudd for arbeidsgivere	Subsidies to employers
+Lønnstrinn	Pay grade, pay level
+Lønnsvilkår	Pay conditions
+Oblikatorisk forsikring	Compulsory insurance
+Offentlig etat	Public organisation
+Offentlig tjeneste	Public service
+Offentlig tjenestemann	Public servant
+Offentlig utlyst stilling 	Externally advertised vacancy
+Offentlige verv 	Public office
+Offensiell meddelse 	Official notice
+Offensiell oversettelse 	Official translation
+Organisering av arbeidet 	Reorganization of work
+Område	Area
+Omsorg (daglig)	Day-to-day care
+Omsorgsansvar 	Responsibility for, caring for
+Omsorgsarbeid	Care work
+Omsorgsdager 	Care days
+Omsorgsovertakelse	Care of the child was assumed, assume care of the child
+Omsorgspenger	Care Benefit
+Omsorgsopoeng	Points for care work
+Omstilling	Restructuring, review
+Omstillingsstønad	Adjustment benefit
+Oppfølging	Follow-up, monitoring
+Oppfølgingsordning	Follow-up scheme
+Oppfølgingsplan	Follow-up
+Oppholde deg i utlandet	If you plan to stand abroad
+Oppholdsadresse	Place of residence
+Oppholdstillatelse 	Residence permit
+Opphørsdato	Termination date
+Opplegg	Plan, arrangement
+Opplæring 	Training, education
+Opplæringsspenger	Training allowance
+Oppsigelsestid	Notice, period of notice
+Opptakskrav 	Admission requirements, entrence requirements
+Opptjening (av alderspensjon)	Earning
+Opptjeningsperioden 	Qualification period
+Opptjeningstid	Qualifying period
+Opptjene rettigheter	Accumulated rights
+Ordinær arbeidstid 	Normal working hours
+Ordinære arbeidsmarkedstiltak 	Ordinary labour marked scheme
+Ordinære satser	Ordinary rates, standard rates
+Organisasjonsnummer	Organization number
+Overgangsperiode	Transition period
+Overgangsregler 	Transitional rules
+Overgangsstønad	Transitional benefit
+Overklage	Appeal
+Oversette	Translation
+Oversikt 	Overview, survey, list
+Overtallig arbeidskraft	Surplus staff
+Overtidsarbeid	Overtime
+Overtidsgodtgjørelse 	Overtime pay
+
+
+Sakkyndig 	Ecpert, specialist
+Saksbehandle / behandle (en sak)	Evaluate, consider an application
+Saksbehandlingstid	Processing time
+Saksbehandling	Administrative prosedures, case prosessing, consideration of application
+Saksnummer	Case number
+Samarbeid	Cooperation
+Samarbeidende spesialister 	Cooperating specialist
+Samboer	Cohabitant, cohabiting partner
+Samfunnsviter	Social specialist
+Samordnet dagsats	Coordinated daily rate
+Samordning	Coordination
+Samordningsplikt	Coordinated
+Samordningsregistrert	Coordination register
+Samsvar	Time spent with child
+Samvær	Visiting arrangements
+Samværsavtale 	Visiting arrangements
+Samværsfradrag	Deduction for time spent with the child
+Samværsrett	Visiting rights
+Sats	Rate
+Sedvane 	Custom, habit
+Selvstendig næringsdrivende	Self-employed
+Sekretariat 	Secretariat
+Selvangivelse, skattemelding	Tax return
+Selvfinansiering	Self-financing
+Selvstendig næringsdrivende	Self-employed person
+Separasjonsbevilling	Separation order
+Sertifikat	Certificate, licence
+Sesongarbeid	Seasonal work, seasonal employment
+Sesongavhengig arbeidsledighet	Seasonally dependant employment
+Sette frem et krav	Submit a claim
+SFO (skolefritidsordning) 	Day-care facilities for schoolchildren, before and after School programs
+Si opp arbeidet	Resign, give notice
+Sikkerhet på arbeidsplassen	Safety at work, job safety
+Sivilforsvarstjeneste	Civil defence service
+Sivilingeniør 	Gradueted engineer
+Sivil tjeneste	Compulsory civilian national service
+Sivilombudsmannen 	Parlamentary Ombudsman
+Skape arbeidsplasser	Create jobs
+Skatt	Tax
+Skattbar inntekt 	Taxable income
+Skatteavtale med andre land 	Double taxation agreement
+Skatteetaten	The Norwegian Tax Administration
+Skattekontor	Tax office
+Skattekort 	Tax card
+Skattetrekk 	Tax deduction
+Skattefradrag	Tax deduction
+Skattepliktig (inntekt)	Taxable
+Skattepliktig (person)	Liable to pay tax
+Skiftarbeider	Shift worker
+Skifteattest	Certificate of probate
+Skillsmissebeviling (om papiret)	Divorce sertificate
+Skillsmissebevilling (om prosessen)	(Grant a) divorce order
+Skjema	Form
+Skjønn	Discretionary treatment, settlement, on a individual basis
+ Skolepenger (tilleggsstønad)	Support for school tuition and fees
+Skrankepersonell	Counter staff, counter personnel
+Sluttvederlag	Severance pay
+Sluttvederlagordningen	Severance Pay Scheme
+Sluttårsak 	Reason for termination of employment
+Småbarnstillegg	Infant supplement
+Sommertid	Summer time
+Sosialarbeider	Social worker
+Sosiale forhold	Social conditions
+Sosiale tjenester 	Social services
+Sosialhjelp	Social assistance
+Sosialkontor 	Social welfare office
+Sosialomsorg	Social welfare
+Sosialøkonom 	Economist
+Sosiolog	Sociologist
+Språkkunnskaper	Language skills
+Språkundervisning	Language learning, language classes
+Spørreundersøkelse 	Questionare survey (fylle ut spørreskjema), interview survey (intervju)
+Statens helsetilsyn 	Norwegian Board of Health Supervision
+Statens lønnssystem 	Public-sector pay system
+Statens pensjonskasse	Norwegian Public Service Pension Fund
+Statistikk	Statistics
+Statistisk sentralbyrå	Statistics Norway
+Statsaksjeselskap	State-owned limited company
+Statsborgerskap	Nationality, citizenship
+Statsforvalteren	The County Governor
+Statstjenestemann	Public-sector employee civil servant
+Statsviter	Poitical scientist
+Stedsfortredelsegodgjørelse 	Deputy allowance
+Stillingsbeskrivelse	Job discription
+Stillingsdatabase	Vacancy databse
+Stillingslister	Job advertisements
+Stillingsplassering 	Job placements
+Stipend	Scholarship, grant
+Straffeansvar 	Criminal liability
+Straffesak	Criminalcase
+Streik 	Strike
+Studieavgift	Tuition fees
+Studieretning	Area of study
+Studieveiledning	Study guidance
+Stønad	Benefit
+Stønadsvilkår 	Coditions for receiving benefits
+Stønadssatser	Benefit rates
+Stønadsmottaker	Benefit recipient
+Stønad til arbeidstrening	Occupational training allowance
+Stønad til barnetilsyn	Child care benefit
+Stønad til boutgifter	Housing benefit
+Stønad til daglige reiser	Daily travel benefit
+Stønad til enslige foreldre 	Single parent benefit
+Stønad til etterlatte	Survivor benefit
+Stønad til fadder/ praktisk hjelp	Practical assistance benefit
+Stønad til flytteutgifter	Relocation benefit
+Stønad til gjenlevende ektefelle 	Surviving spouse benefit
+Stønad til hjemreise	Travel allowance for journeys home
+Stønad til husholdsutgifter	Household expanses allowance
+Stønad til skolemateriell 	School materials benefit
+Stønad ved arbeidsledighet 	Unemployment benefit
+Stønad ved barns sykdom 	Benefit for childrens illness
+Støttetiltak for innvandrere	Support measures for immigrants
+Støy 	Noise
+Støyskadet	Suffering from noise-unduced hearing loss
+Supplerende stønad	Supplementary benefit
+Suspendere	Suspend
+Svalbardtillegg	Svalbard supplement
+Svangerskapspenger	Pregnancy benefit
+Svenneprøve 	Journeymans examination
+Sykepenger	Sickness benefit
+Sykefravær	Absence due to sickness
+Sykmelding 	Sick note
+Sykmelding (aktiv)	Active sick note
+Sykmelding (Avventende)	Reserved sick note
+Sykmelding (gradert)	Partial sick note
+Sykepleier	Nurse
+Syketransport	Ambulance services
+Sysselsetting 	Employment
+Sysselsettingspolitikk 	Employment policy
+Særfradrag	Special dedution
+Særlig lønnstillegg	Special pay supplement
+Særskilte arbeidsoppgaver 	Spesific duties, spesific tasks
+Særregel	Special rule
+Særtillegg	Special supplement
+Særtilskudd v. barnebidrag	Extraordinary child support
+Søke om arbeid 	Look for work, look for a job
+Søke om 	Apply for
+Søknad om opptak	Application for admission
+Søknadsbrev	Application
+Søknadsskjema	Application form
+Søndagstillegg	Sunday allowance
+Varig	Permanent
+Varighet	Duration
+Varig skade	Permanent injury
+Varig sykdom	Chronic illness, disease, disorder
+Varig tilrettelagt arbeid	permanent work adjestment
+Varighet	Duration
+Varsel om oppsigelse	Dismissal notice, redundancy notice
+Vedlegg	Attachment, appendix
+Vedtak	Letter of decision
+Veiledning	Guidance
+Veileder	Advisor
+Velferdspermisjon	Compassionate leave
+Velferdspolitikk 	Welfare policy
+Ventedager	Waiting period of XX days
+Ventelønn	Interim pay
+Ventepenger	Interim pay
+Ventetid	Waiting period
+Verneombud	Safety officer, safety supervisor
+Vernet arbeid	Sheltered employment
+Vernet arbeidsplass	Sheltered workplace
+Vigselsattest	Marrige certificate
+Vikaravtale 	Temporary employment contract
+Vikarbyrå	Temporary employment agency
+Vilkårene	Terms and conditions, requirements
+Virkedag	Business day
+Vikariat	Temoprary post
+Vikarplass	Temoprary post
+Vikartjeneste	Temporary employment service
+Virkedag	Business day
+Virksomhet	Business, agency, enterprise, activity, undertaking, operation
+Vitnemål	Certificate, diploma
+Voksenopplæring	Adult education
+Vurdere	Assess, consider, evaluate, appraise
+Åpningstider 	Opening hours
+Årsak	Cause
+Årskontroll	Annual verification
+Årsmelding	Annual report
+Årsrapport	Annual report
+
+
+Dag foran hellidag 	Day befora a Sunday or public holiday
+Daglig leder	Manager
+Daglig omsorg	Daily care
+Dagpengemottaker	Recipient of unemployment benefit
+Dagpenger	Unemployment benefit
+Dagpenger (misbruk av) (bevisst)	Unemployment benefit fraud
+Dagpenger (misbruk av) (ubevisst)	Misuse of unemployment benefit fraud
+Dagsverk	Fulltime equivalent
+Databasert	Computer-aided
+Databehandling	Data processing
+Datapersonell	IT personnel
+Deklarasjon 	Declaration
+Delt bosted	Joint custody (for shared children)
+Delt dagsverk	Split shift
+Deltidsansatt	Part-time employee
+Deltikstiltak	Part-time employment schemes
+Depositum	Deposit
+Dialogmøte	Dialogue meeting
+Differensiert lønnspolitikk	Policy differential pay
+Distrikt	District
+Dokumentasjon	Documention
+Dødsattest	Death certificate
+Garantert lønn under prøvetiden	Garanteed pay during trial period
+Garantert minstelønn	Guaranteed minimum wage
+Garantikassen for fiskere	Guarantee Fund for Fishermen
+Garantilott	Guarantee share
+Gebyr	Fee, Charge
+Generell lønnsforhøyelse 	General pay increase
+Generelt tillegg	General bonus, General Supplement
+Geografisk region	Geographical area, region
+Gjeldsordning	Debt settlement
+Gjenlevendepensjon	Survivor’s pension
+Gjenlevendetillegg (uføretrygd og pensjon)	Survivor supplement
+Gjenlevende ektefelle 	Surviving spouse
+Gjennomsnittlig ukelønn	Average weekly pay
+Gjenoppta (ved gjenopptak av dagpenger)	To reapply
+Godskive ansiennitet	Recognition og qualifications
+Godtgjørelse 	Remuneration
+Gradering/ gradert (uttak)	Graded
+Gradert barnehageplass	Part time place in kindergarden
+Gradert sykmelding 	Graded sick leave
+Gravferdsstønad 	Funeral grant
+Grensearbeider	Cross-boarder worker
+Grunnbeløp 	National insurance basic amount
+Grunnlag	Basis, Foundation
+Grunnleggende rettighet 	Fundamental right
+Grunnpensjon	Basic pension
+Grunnstønad 	Basic benefit
+Gruppearbeidstillatelse 	Collective work permit
+Gyldig 	Valid
+Jobbformidling på internett	Internet placement services
+Jobbklubb 	Job club
+Jobbskapningsprosjekt	Job creation project
+Jordmor	Midwife
+Juridisk rådgiver	Legal advisor
+Juridiske spørsmål	Legal matters
+Maksimumsgrense 	Upper limit, maximun limit
+Markedsandel 	Marked share
+Markedsføring 	Marketing
+Markedsrettet	Marked-oriented
+Medisinsk stønad 	Medical benefit
+Medlem (i folketrygden)	Member of the National Insurance Scheme
+Medlemsavgift	Membership fee, subscription
+Meklingsattest 	Mediation certificate
+Melde (arbeidsløs) 	Register as unemployed
+Meldekort 	Employment status form
+Meldeplikt 	Obligation to report
+Melding	Notification, report, message
+Midlertidig ansatte	Temporary staff (flertall), temporary employee (entall)
+Midlertidig arbeid	Temporary work
+Midlertidig bortfall 	Temporary lay-off
+Midlertidig lønnstilskudd	Temporary wage subsidies
+Militærtjeneste	Military service, national service
+Mindreårig	Minor
+Minibank	ATM, cash machine
+Minstelønn	Minimum wage
+Minste pensjonsnivå	Minimum pension level
+Minstepensjon	Minimum pension
+Minstepensjonist 	A person receiving minimum level of pension / Minimum pension recipient
+Mobilitetsfremmede stønad	Mobility allowance
+Mobiltelefon	Mobile phone (UK), Cell phone (US)
+Mobiltelefonnummer	Mobile phone number
+Modernisering	Modernization
+Moms 	VAT
+Morsmål	Mother tongue, native tongue, first language
+Motta pensjon 	draw a pension
+Mødrekvote (mors permisjon)	Maternal quota (maternity leave)
+Møtereferat	Minutes
+Mål	Objective, goal, target
+Målform	Form of Norwegian (Bokmål eller Nynorsk)
+Målgruppe	Target group
+Pappapermisjon 	Paternity leave
+Parafering	Countersigning
+Pasientreiser	Patient transport
+Pendle	Commute
+Pensjon	Pension
+Pensjonsbeholdning	Pension reserves
+Pensjonsberegning	Pension calculation
+Pensjonsberettiget	Entitled to pension
+Pensjonsgivende inntekt 	Pensionable income
+Pensjonsgrunnlag	Pensionable basis
+Pensjonskasse	Pension fund
+Pensjonsopptjening	Earning pension
+Pensjonsordning	Pension scheme
+Personsrettigheter	Pension rights
+Permisjon	Leave, leave of absence
+Permisjon uten lønn	Unpaid leave
+Permittere	Lay-off, make s.o refundant
+Permittering	Temporary lay-off
+Permitteringsgrad	Degree of lay-off
+Permitteringsvarsel	Lay-off notice
+Person som kan flyttes, omplasseres	Transferable person
+Personlia 	Personal data, personalia
+Personalutvelgelse	Staff selection
+Personinntekt	Personal income
+Personlig ordning	Personal arrangement
+Fødselsnummer (fødsels- og personnummer)	National identity number
+Personalopplysninger	Personal data
+Plasseringstiltak	Placement measures
+Pleiepenger 	Attendance allowance
+Pleietrengende 	People/ person in need of care
+Plikt 	Liability, duty, obligation
+Pliktig førstegangstjeneste	Compulsory military service
+Politisk asyl	Political asylum
+Postgiro	Postal giro
+Postnummer	Postcode
+Poststed	Town, city
+Praksisplass 	Trainee placement
+Praksisplass og arbeidstrening	Sponsored traineeship
+Praktisk	Practical
+Pressebyrå	Press agency
+Pressekonferanse	Press conferance
+Pressemelding	Press release
+Pressen	The press
+Pressetalsmann	Press spokeperson
+Pressgruppe	Pressure group, lobby group
+Privat avtale om bidrag	Private support agreement
+Private utleiebyrå (vikarbyrå)	Private temporary staffing agencies
+Produktivitetstiltak	Productivity-enhancing measures
+Prognose	Forecast
+Programmere	Program
+Prosent	Per cent
+Prosentpoeng	Percentage point
+Protese	Prosthtic
+Protokoll	Protocol
+Prøveperiode	Trial period
+Publikum	Public, general public
+Pågripelse	Arrest
+Påklage	Appeal against
+Pålagt overtidsarbeid	Compulsory overtime
+Pålegge	Order
+Påleggstrekk	Attachment of earnings
+Påminnelse	Reminder
+Tannlege	Dentist
+Tap av rettighet	Loss of rights
+Tariff	Tariff
+Tariffavtale	Collective agreement
+Tariffbestemmelser	Provisions of a collective agreement
+Tarifflønn	Standard pay
+Tariffperiode	Term of a cellective agreement
+Taushetsplikt	Bound by confidentiality, duty of confidentiality, professional secrecy
+Teknisk utdannelse 	Technical education
+Tekst-tv tjenester	Teletext services
+Telefonnummer	Telephone number
+Teoretisk opplæring	Theoretical training
+Termin (svangerskap)	estimated date of delivery, due date
+Tidsbegrenset lønnstilskudd	Time-limited wage subsidies
+Tidsbegrenset uføretrygd 	Time-limited disability pension
+Tidsrom	Period
+Tilbakebetaling	Repayment, pay back
+Tilbakebetalingserklæring	Repayment declaration
+Tildele	Assign, grant, award
+Tilgang på ledige stillinger	Number of vacancies
+Tillegg	Supplement
+Tilleggsstønader	Supplemental benefits
+Tilleggsbidrag	Supplementary support
+Tilleggspensjon	Supplementary pension
+Tilleggsskatt 	Surtax
+Tiltakspenger 	Employment scheme benefits
+Tilsettingsforhold	Terms and conditions of employment
+Tilskudd til flytting 	lump-sum grant for relocation expenses (i løpende tekst) relocation grant (overskrifter osv.)
+Tilskudd til opplæring 	Training grant
+Tilsyn med barn 	Child care
+Tilsynsutgifter	Child-care costs
+Tiltak	Measures, schemes
+Tiltak med lønn	Measures med lønn
+Tiltaksbudsjett	Budgets for labour  marked measures
+Tiltakspenger 	Benefits while participating in employment schemes
+Tiltre en post eller stilling 	Take up a post
+Timeliste	Time sheet
+Tingretten	District Court
+Tjenestepensjon	Occupational pension, workplace pension, company pension
+Tjenestevei	Through official channels
+Tjenesteår	Years of service
+Tolketjeneste	Interpreting service
+Tollpliktig 	Dutiable, subject to duty
+Topplønn	Maximum salary
+Total arbeidstid	Total working hours
+Trafikkbestemmelser	Traffic regulations
+Trangt arbeidsmarked	Tight labour marked
+Trekkoppgave	End of year certificate
+Trygd	Social security
+Trygdeavgift	National Insurance Contributions
+Trygdeavtale	Social security agreement
+Trygdekontor	Social security office
+Trygderetten	National Insurance Court
+Trygdetid	Period of national insurance
+Tungt arbeide	Heavy work
+Turnusarbeid (faste skift)	Fixed shifts
+Turnusarbeid (skiftende turnus)	Rotating shift work
+Yrke	Trade, vocation, occupation, profession
+Yrke med gode fremtidsutsikter	Profession with good prospects
+Yrkesaktivitet	Occupational activity
+Yrkesdeltakelse	Labour force participation
+Yrkeserfaring	Vocational experience, professional experience
+Yrkesklassifisering	Occupation classification
+Yrkeskode	Occupation code
+Yrkesmessig	Occupation, vocotional, professional
+Yrkesmobilitet	Occupation mobility
+Yrkesskade 	Occupational injury and illness
+Yrkesskadetrygd 	Occupation inhury benefit
+Yrkesskole	Vocotional school
+Yrkesveiledning	Vocotional guidance, careers advice
+Ytelse	Benefit
+Arbeids- og velferdsetaten (NAV)	The Norwegian Labour and Welfare administration
+Arbeids- og velferdsdirektoratet	Directorate of Labour and Welfare
+Arbeids- og tjenestelinjen	Labour and Service Department
+NAV Fylke	NAV County
+NAV-kontor	NAV-office
+NAV Kontaktsenter	NAV Call and Service Centre
+NAV Hjelpemidler og tilrettelegging	NAV Assistive Technology and Adaptions
+NAV Arbeidslivssenter	NAV Work Centre
+NAV Arbeid og ytelser	NAV Work and Benefits
+NAV Familie- og pensjonsytelser	NAV Family Benefits and Pensions
+NAV Kontroll	NAV Control
+NAV Klageinstans	NAV Appeals
+Økonomilinjen	Accounting Department
+NAV Økonomi pensjon	NAV Accounting Pensions
+NAV Økonomi stønad	NAV Accounting Benefits
+NAV Økonomiteneste	NAV Accounting-services
+Avdeling	Department
+Seksjon	Section
+Enhet	Unit
+arbeids- og velferdsdirektør	Director General (of the Norwegian Labour and Welfare Service)
+avdelingsdirektør	Director of <navn på avdelingen>, Head of <navn på avdelingen>
+fylkesdirektør	NAV County Manager / NAV County Director
+NAV-leder	NAV Local Manager
+seksjonssjef	Head of Section <navn på seksjon>
+kontorsjef	Principal Officer
+saksbehandler	Executive officer, Officer in charge of case
+veileder	Advisor
+prosjektleder	Project manager
