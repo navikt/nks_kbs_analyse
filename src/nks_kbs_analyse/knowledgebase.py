@@ -4,8 +4,9 @@ Vi benytter kunnskapsbasen på BigQuery som er gjengitt i
 [Quarto](https://data.ansatt.nav.no/quarto/e7b3e02a-0c45-4b5c-92a2-a6d364120dfb/index.html)
 """
 
+import re
 from datetime import datetime
-from typing import Iterable
+from typing import Iterable, List, Tuple, Union
 
 from langchain_core.documents import Document
 
@@ -196,6 +197,202 @@ def split_documents(
     )
     splits: list[Document] = text_splitter.transform_documents(docs)
     return splits
+
+
+class CustomMarkdownHeaderSplitter:
+    """Klasse for å splitte tekst basert på markdownoverskrifter.
+
+    Klassen er en re-implementasjon av MarkdownHeaderTextSplitter fra langchain_text_splitters.
+
+    """
+
+    DEFAULT_HEADER_KEYS = {"#": "#", "##": "##", "###": "####"}
+    """Default headers å splitte teksten på"""
+
+    def __init__(
+        self,
+        headers_to_split_on: Union[List[Tuple[str, str]], None] = None,
+        strip_headers: bool = True,
+    ):
+        """Setter opp en CustomMarkdownHeaderSplitter."""
+        self.chunks: List[Document] = []
+        self.current_chunk = Document(page_content="")
+        self.current_header_stack: List[Tuple[int, str]] = []
+        self.strip_headers = strip_headers
+        if headers_to_split_on:
+            self.splittable_headers = dict(headers_to_split_on)
+        else:
+            self.splittable_headers = self.DEFAULT_HEADER_KEYS
+
+    def split_text(self, text: str) -> List[Document]:
+        """Splitt opp en gitt tekst basert på markdownoverskrifter.
+
+        Identifiserte overskrifter (headers) skal trekkes ut av teksten og legges til som metadata i dokumentet.
+
+        Til forskjell fra hvordan MarkdownHeaderTextSplitter er implementert vil denne metoden
+        bevare original formatering ellers i teksten.
+
+        """
+        raw_lines = text.splitlines(keepends=True)
+
+        while raw_lines:
+            raw_line = raw_lines.pop(0)
+            header_match = self._match_header(raw_line)
+            if header_match:
+                self._complete_chunk_doc()
+
+                if not self.strip_headers:
+                    self.current_chunk.page_content += raw_line
+
+                # Add the header to the stack
+                header_depth = len(header_match.group(1))
+                header_text = header_match.group(2)
+                self._resolve_header_stack(header_depth, header_text)
+            else:
+                self.current_chunk.page_content += raw_line
+
+        self._complete_chunk_doc()
+        return self.chunks
+
+    def _resolve_header_stack(self, header_depth: int, header_text: str) -> None:
+        for i, (depth, _) in enumerate(self.current_header_stack):
+            if depth == header_depth:
+                self.current_header_stack[i] = (header_depth, header_text)
+                self.current_header_stack = self.current_header_stack[: i + 1]
+                return
+        self.current_header_stack.append((header_depth, header_text))
+
+    def _complete_chunk_doc(self) -> None:
+        chunk_content = self.current_chunk.page_content
+        # Discard any empty documents
+        if chunk_content and not chunk_content.isspace():
+            # Apply the header stack as metadata
+            for depth, value in self.current_header_stack:
+                header_key = self.splittable_headers.get("#" * depth)
+                self.current_chunk.metadata[header_key] = value
+            self.chunks.append(self.current_chunk)
+        # Reset the current chunk
+        self.current_chunk = Document(page_content="")
+
+    def _match_header(self, line: str) -> Union[re.Match, None]:
+        match = re.match(r"^(#{1,6}) (.*)", line)
+        # Only matches on the configured headers
+        if match and match.group(1) in self.splittable_headers:
+            return match
+        return None
+
+
+def _split_documents_on_headers(
+    documents: List[Document], headers_to_split_on: List[str]
+) -> List[Document]:
+    """Splitt dokumenter basert på markdownoverskrifter.
+
+    Returner de splittede dokumentene med overskriftene som ekstra metadata.
+    """
+    split_docs = []
+    for document in documents:
+        markdown_header_splitter = CustomMarkdownHeaderSplitter(
+            headers_to_split_on=headers_to_split_on, strip_headers=True
+        )
+        fragments = markdown_header_splitter.split_text(document.page_content)
+        doc_metadata = document.metadata.copy()
+        split_docs.extend(
+            Document(
+                page_content=fragment.page_content,
+                metadata={**doc_metadata, "header_dict": fragment.metadata.copy()},
+            )
+            for fragment in fragments
+        )
+    return split_docs
+
+
+def _combine_headers_and_content(
+    documents: List[Document], include_doc_preamble=False
+) -> List[Document]:
+    """Legg til kontekst fra metadata i page_content for documents.
+
+    Args:
+        documents:
+            Dokumentene som skal oppdateres
+        include_doc_preamble:
+            True/False: Om metadataene artikkeltype, tittel, tab og seksjon også skal inkluderes i page_content (i tillegg til markdown headers)
+    """
+    combined_docs = []
+    for document in documents:
+        header_metadata = document.metadata.pop("header_dict", {})
+        headers = "\n".join(
+            [f"{key} {value}" for key, value in header_metadata.items()]
+        )
+
+        if include_doc_preamble:
+            type_metadata = document.metadata["ArticleType"]
+            title_metadata = document.metadata["Title"]
+            section_metadata = document.metadata["Section"]
+            if document.metadata["Tab"] == "Annen":
+                tab_metadata = ""
+            else:
+                tab_metadata = document.metadata["Tab"]
+            doc_preamble = f"{type_metadata} om {title_metadata}.\nSeksjon: {section_metadata} - {tab_metadata}."
+            new_page_content = (
+                f"{doc_preamble}\n\n{headers}\n\n{document.page_content}"
+                if headers
+                else document.page_content
+            )
+        else:
+            new_page_content = (
+                f"{headers}\n\n{document.page_content}"
+                if headers
+                else document.page_content
+            )
+
+        combined_docs.append(
+            Document(page_content=new_page_content, metadata=document.metadata)
+        )
+    return combined_docs
+
+
+def chunking_with_context(
+    docs: Iterable[Document],
+    chunk_size: int = 1000,
+    overlap: int = 100,
+    headers_to_split_on: Union[List[Tuple[str, str]], None] = None,
+    include_doc_preamble: bool = False,
+) -> list[Document]:
+    """Splitt dokumenter ned til mindre dokumenter slik at de er passende for å sende til en embedding modell.
+
+    Gjør først en splitt basert på markdown headers, og deretter splitt basert på antall tegn.
+    Metadata fra markdown headers og ev. annen metadata (valgfritt) legges til i de resulterende dokumentene.
+
+    Args:
+        docs:
+            Dokumentene som potensielt skal splittes
+        chunk_size:
+            Hvor store skal et nytt dokument være når det splittes
+        overlap:
+            Når det splittes, hvor mye tekst kan/skal overlappe mellom en splitt
+        headers_to_split_on:
+            Dict med overskriftsnivå som skal splittes på
+        include_doc_preamble:
+            Om artikkeltype, tittel og seksjon skal også inkluderes i dokumentenes page_content
+    Returns:
+        De originale dokumentene potensielt splittet i mindre dokumenter med kontekst fra headers og eventuelt annen metadata lagt til
+    """
+    from langchain_text_splitters import Language, RecursiveCharacterTextSplitter
+
+    split_docs = _split_documents_on_headers(docs, headers_to_split_on)
+
+    text_splitter = RecursiveCharacterTextSplitter.from_language(
+        language=Language.MARKDOWN, chunk_size=chunk_size, chunk_overlap=overlap
+    )
+    # Split the documents
+    split_docs = text_splitter.transform_documents(docs)
+
+    # Concatenate metadata to page content
+    split_docs_with_metadata = _combine_headers_and_content(
+        split_docs, include_doc_preamble
+    )
+
+    return split_docs_with_metadata
 
 
 def clean_doc(doc: Document) -> Document:
