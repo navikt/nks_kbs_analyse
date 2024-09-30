@@ -6,7 +6,7 @@ Vi benytter kunnskapsbasen på BigQuery som er gjengitt i
 
 import re
 from datetime import datetime
-from typing import Iterable, List, Tuple, Union
+from typing import Iterable, Tuple, Union
 
 from langchain_core.documents import Document
 
@@ -211,20 +211,20 @@ class CustomMarkdownHeaderSplitter:
 
     def __init__(
         self,
-        headers_to_split_on: Union[List[Tuple[str, str]], None] = None,
+        headers_to_split_on: Union[list[Tuple[str, str]], None] = None,
         strip_headers: bool = True,
     ):
         """Setter opp en CustomMarkdownHeaderSplitter."""
-        self.chunks: List[Document] = []
+        self.chunks: list[Document] = []
         self.current_chunk = Document(page_content="")
-        self.current_header_stack: List[Tuple[int, str]] = []
+        self.current_header_stack: list[Tuple[int, str]] = []
         self.strip_headers = strip_headers
         if headers_to_split_on:
             self.splittable_headers = dict(headers_to_split_on)
         else:
             self.splittable_headers = self.DEFAULT_HEADER_KEYS
 
-    def split_text(self, text: str) -> List[Document]:
+    def split_text(self, text: str) -> list[Document]:
         """Splitt opp en gitt tekst basert på markdownoverskrifter.
 
         Identifiserte overskrifter (headers) skal trekkes ut av teksten og legges til som metadata i dokumentet.
@@ -274,7 +274,7 @@ class CustomMarkdownHeaderSplitter:
         # Reset the current chunk
         self.current_chunk = Document(page_content="")
 
-    def _match_header(self, line: str) -> Union[re.Match, None]:
+    def _match_header(self, line: str) -> Union[re.Match[str], None]:
         match = re.match(r"^(#{1,6}) (.*)", line)
         # Only matches on the configured headers
         if match and match.group(1) in self.splittable_headers:
@@ -283,13 +283,14 @@ class CustomMarkdownHeaderSplitter:
 
 
 def _split_documents_on_headers(
-    documents: List[Document], headers_to_split_on: List[str]
-) -> List[Document]:
+    documents: Iterable[Document],
+    headers_to_split_on: Union[list[Tuple[str, str]], None] = None,
+) -> list[Document]:
     """Splitt dokumenter basert på markdownoverskrifter.
 
     Returner de splittede dokumentene med overskriftene som ekstra metadata.
     """
-    split_docs = []
+    split_docs: list[Document] = []
     for document in documents:
         markdown_header_splitter = CustomMarkdownHeaderSplitter(
             headers_to_split_on=headers_to_split_on, strip_headers=True
@@ -307,8 +308,8 @@ def _split_documents_on_headers(
 
 
 def _combine_headers_and_content(
-    documents: List[Document], include_doc_preamble=False
-) -> List[Document]:
+    documents: list[Document], include_doc_preamble: bool = False
+) -> list[Document]:
     """Legg til kontekst fra metadata i page_content for documents.
 
     Args:
@@ -317,7 +318,7 @@ def _combine_headers_and_content(
         include_doc_preamble:
             True/False: Om metadataene artikkeltype, tittel, tab og seksjon også skal inkluderes i page_content (i tillegg til markdown headers)
     """
-    combined_docs = []
+    combined_docs: list[Document] = []
     for document in documents:
         header_metadata = document.metadata.pop("header_dict", {})
         headers = "\n".join(
@@ -355,7 +356,7 @@ def chunking_with_context(
     docs: Iterable[Document],
     chunk_size: int = 1000,
     overlap: int = 100,
-    headers_to_split_on: Union[List[Tuple[str, str]], None] = None,
+    headers_to_split_on: Union[list[Tuple[str, str]], None] = None,
     include_doc_preamble: bool = False,
 ) -> list[Document]:
     """Splitt dokumenter ned til mindre dokumenter slik at de er passende for å sende til en embedding modell.
@@ -379,20 +380,20 @@ def chunking_with_context(
     """
     from langchain_text_splitters import Language, RecursiveCharacterTextSplitter
 
-    split_docs = _split_documents_on_headers(docs, headers_to_split_on)
+    header_split_docs = _split_documents_on_headers(docs, headers_to_split_on)
 
     text_splitter = RecursiveCharacterTextSplitter.from_language(
         language=Language.MARKDOWN, chunk_size=chunk_size, chunk_overlap=overlap
     )
     # Split the documents
-    split_docs = text_splitter.transform_documents(docs)
+    recursive_split_docs = text_splitter.transform_documents(header_split_docs)
 
-    # Concatenate metadata to page content
-    split_docs_with_metadata = _combine_headers_and_content(
-        split_docs, include_doc_preamble
+    # Concatenate context to page content
+    split_docs_with_context = _combine_headers_and_content(
+        recursive_split_docs, include_doc_preamble
     )
 
-    return split_docs_with_metadata
+    return split_docs_with_context
 
 
 def clean_doc(doc: Document) -> Document:
