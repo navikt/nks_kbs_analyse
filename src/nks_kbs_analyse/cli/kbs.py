@@ -1,9 +1,11 @@
 """Underkommando for NKS KBS."""
 
+import json
 from typing import Annotated
 
 import httpx
 import typer
+from rich.live import Live
 from rich.prompt import Prompt
 
 from . import console, get_auth
@@ -30,11 +32,17 @@ def chat(
             req = Prompt.ask("Spørsmål til Bob", console=console)
             if not req.startswith("?follow-up"):
                 json_req = {"history": chat_history, "question": req.strip()}
-                with console.status("Spør Bob...", spinner="dots"):
-                    resp = client.post(
-                        "/api/v1/chat", json=json_req, timeout=timeout
-                    ).raise_for_status()
-                data = resp.json()
+                data = {}
+                with Live(console=console, auto_refresh=False, transient=True) as live:
+                    with client.stream(
+                        "POST", "/api/v1/stream/chat", json=json_req, timeout=timeout
+                    ) as reply:
+                        reply = reply.raise_for_status()
+                        for line in reply.iter_lines():
+                            if line.startswith("data: "):
+                                _, msg = line.split(" ", maxsplit=1)
+                                data = json.loads(msg)
+                                live.update(data["answer"]["text"], refresh=True)
                 answer = data["answer"]
                 chat_history.append({"role": "human", "content": req.strip()})
                 chat_history.append({"role": "ai", "content": answer["text"]})
