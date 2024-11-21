@@ -115,22 +115,16 @@ def reindex(
         with Progress(console=console) as progress:
             idx_task = progress.add_task("Indekserer vektordatabase")
             for content in response.iter_lines():
-                data: dict[str, Any] = json.loads(content)
-                if "finished" in data:
-                    progress.update(
-                        idx_task, total=float(data["total"]), completed=data["finished"]
+                if content.startswith("data:"):
+                    data: dict[str, Any] = json.loads(
+                        content.split(" ", maxsplit=1)[-1]
                     )
-                else:
-                    console.print("[green bold]Fullførte indeksering")
-                    console.print(
-                        f"\tSiste endring i vektordatabase: {data['last_modified']}"
-                    )
-                    console.print(
-                        f"\tAntall nye kunnskapsartikler: {data['knowledge_articles']}"
-                    )
-                    console.print(
-                        f"\tAntall oppdaterte rader: {data['split_fragments']}"
-                    )
-                    console.print(
-                        f"\tAntall kunnskapsartikler slettet: {data['knowledge_articles_deactivated']}"
-                    )
+                    if "finished" in data:
+                        progress.update(
+                            idx_task,
+                            total=float(data["total"]),
+                            completed=data["finished"],
+                        )
+                    else:
+                        console.print("[green bold]Fullførte indeksering")
+                        console.print(data)
