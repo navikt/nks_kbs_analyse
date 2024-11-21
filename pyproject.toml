@@ -58,3 +58,6 @@ dev-dependencies = [
 markers = [
     "interactive: tester som krever bruker deltakelse (hopp over med '-m \"not interactive\"')",
 ]
+
+[tool.mypy]
+plugins = ['pydantic.mypy']
