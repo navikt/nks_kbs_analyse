@@ -22,4 +22,4 @@ class Settings(BaseSettings):
     """URL til NKS-KBS tjenesten"""
 
 
-settings = Settings()  # type: ignore[call-arg]
+settings = Settings()

@@ -84,5 +84,5 @@ class Settings(BaseSettings):
 # MERK: Vi ignorerer 'call-arg' for mypy ved instansiering på grunn av følgende
 # bug: https://github.com/pydantic/pydantic/issues/6713
 
-settings = Settings()  # type: ignore[call-arg]
+settings = Settings()
 """Instansiering av konfigurasjon som burde benyttes for å hente innstillinger."""

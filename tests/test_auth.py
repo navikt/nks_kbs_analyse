@@ -44,7 +44,7 @@ def test_vector_search() -> None:
     """Sjekk at kall til `/api/v1/search` fungerer med autentisering."""
     base_url = "https://nks-vdb.ansatt.dev.nav.no"
     auth = BrowserSessionAuthentication(
-        base_url=Url(base_url),
+        base_url=base_url,
         browser=cast(BrowserType, os.getenv("BROWSER")),
     )
     response = httpx.get(

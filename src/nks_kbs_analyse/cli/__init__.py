@@ -16,8 +16,6 @@ def get_auth(url: str) -> BrowserSessionAuthentication:
     """Hjelpemetode for å hente autentiseringsobjekt."""
     import os
 
-    from pydantic_core import Url
-
     return BrowserSessionAuthentication(
-        Url(url), browser=cast(BrowserType, os.getenv("BROWSER"))
+        url, browser=cast(BrowserType, os.getenv("BROWSER"))
     )
