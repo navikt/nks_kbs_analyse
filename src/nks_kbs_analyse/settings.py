@@ -4,21 +4,31 @@ Noen innstillinger er ment å settes med miljøvariabler. For eksempel kan man
 benytte '.env' filer
 """
 
-from pydantic import AliasChoices, BaseModel, Field, SecretStr
+from pydantic import AliasChoices, AnyHttpUrl, BaseModel, Field, SecretStr
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class AzureConfig(BaseModel):
-    """Konfigurasjon for tilkobling mot Azure OpenAI."""
+    """Konfigurasjon for tilkobling mot Azure og Azure AI Search."""
 
     embedding_deployment: str = "text-embedding-3-large"
     """Navn på embedding modell deployment på Azure OpenAI Studio"""
+
     embedding_model: str = "text-embedding-3-large"
     """Type embedding modell for valgt embedding deployment"""
-    api_versjon: str = "2023-05-15"
+
+    embedding_size: int = 3072
+    """Antall dimensjoner i embedding modell"""
+
+    llm_deployment: str = "assistent"
+    """Navn på språkmodell deployment på Azure OpenAI Studio"""
+
+    api_versjon: str = "2024-02-01"
     """OpenAI API versjon å benytte"""
+
     chunk_size: int = 1024
-    """Antall dokumenter som kan sendes til embedding samtidig"""
+    """Antall dokumenter som kan sendes samtidig"""
+
     search_index: str = "chunk_size_1500"
     """Navn på Azure Search index"""
 
@@ -27,10 +37,10 @@ class GCPConfig(BaseModel):
     """Konfigurasjon for tilkobling mot GCP og BigQuery."""
 
     prosjekt: str = "nks-aiautomatisering-prod-194a"
-    """GCP prosjekt å benytte."""
+    """GCP prosjekt å benytte"""
 
     datasett: str = "kunnskapsbase"
-    """GCP datasett i prosjekt."""
+    """GCP datasett i prosjekt"""
 
 
 class Settings(BaseSettings):
@@ -45,18 +55,16 @@ class Settings(BaseSettings):
 
     # Følgende felter kan ikke plasseres i under modeller fordi man trenger at
     # 'validation_alias' fungerer uten prefix
-    api_key: SecretStr = Field(
-        validation_alias=AliasChoices(
-            "nks_ds_api_key", "azure_openai_api_key", "openai_api_key"
-        ),
+    azure_api_key: SecretStr = Field(
+        validation_alias=AliasChoices("azure_openai_api_key", "openai_api_key"),
     )
-    """Azure OpenAI API nøkkel"""
-    endpoint: str = Field(
-        default="https://nks-digital-assistent.openai.azure.com/",
-        validation_alias=AliasChoices(
-            "nks_ds_endpoint", "azure_openai_endpoint", "openai_endpoint"
-        ),
+    """Azure OpenAI API nøkkel - brukes for autentisering mot språkmodellen"""
+
+    azure_endpoint: AnyHttpUrl = Field(
+        default=AnyHttpUrl("https://nks-digital-assistent.openai.azure.com/"),
+        validation_alias=AliasChoices("azure_openai_endpoint", "openai_endpoint"),
     )
+    """Azure OpenAI endpoint - Adressen som brukes for kall mot språkmodellen"""
 
     azure_search_endpoint: str = Field(
         default="https://nks-digital-assistent.search.windows.net",
@@ -75,7 +83,7 @@ class Settings(BaseSettings):
     )
     """Azure AI Search API nøkkel"""
 
-    azure: AzureConfig = AzureConfig()
+    azure_ai: AzureConfig = AzureConfig()
     """Innstillinger for Azure tilkobling"""
     gcp: GCPConfig = GCPConfig()
     """Innstillinger for GCP."""
