@@ -54,9 +54,9 @@ class AzureExtended(AzureSearch, ExtendedVectorStore):  # type: ignore
             endpoint=azure_search_endpoint, credential=azure_search_credential
         )
         # finner eksisterende index
-        existing_index = index_client.get_index(name=settings.azure.search_index)
+        existing_index = index_client.get_index(name=settings.azure_ai.search_index)
         # sletter indexen
-        index_client.delete_index(settings.azure.search_index)
+        index_client.delete_index(settings.azure_ai.search_index)
         # gjenoppretter tom index
         index_client.create_index(existing_index)
 
@@ -133,7 +133,7 @@ def create_store(
     return AzureExtended(
         azure_search_endpoint=settings.azure_search_endpoint,
         azure_search_key=settings.azure_search_admin_key.get_secret_value(),
-        index_name=settings.azure.search_index,
+        index_name=settings.azure_ai.search_index,
         embedding_function=embedding_function,
         fields=INDEX_FIELDS,
     )
