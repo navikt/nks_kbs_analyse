@@ -6,6 +6,7 @@ nettleser og deretter lese cookies slik at vi kan gjenbruke sessions token.
 """
 
 import datetime
+import os
 import time
 import webbrowser
 from typing import Literal
@@ -33,14 +34,23 @@ class BrowserSessionAuthentication:
     browser_type: BrowserType | None
     """Typen nettleser - brukes for å hente cookies fra riktig nettleser"""
 
+    profile_path: str | None
+    """Sti til nettleserprofil dersom ikke default skal brukes (kun implementert for chrome)"""
+
     ends_at: datetime.datetime | None = None
     """Når går sesjonen ut på dato"""
 
-    def __init__(self, base_url: HttpUrl, browser: BrowserType | None = None):
+    def __init__(
+        self,
+        base_url: HttpUrl,
+        browser: BrowserType | None = None,
+        profile_path: str | None = None,
+    ):
         """Lag et nytt autentiseringsobjekt som autentiserer for `base_url`."""
         self.base_url = httpx.URL(str(base_url))
         self.client = httpx.Client(base_url=self.base_url)
         self.browser_type = browser
+        self.profile_path = profile_path
 
     def _load_session(self) -> httpx.Cookies | None:
         """Last inn autentiserings sesjons cookie.
@@ -49,9 +59,14 @@ class BrowserSessionAuthentication:
         """
         if self.browser_type and hasattr(browser_cookie3, self.browser_type):
             cookie_method = getattr(browser_cookie3, self.browser_type)
-            all_cookies = cookie_method()
-        else:
-            all_cookies = browser_cookie3.load()
+            if self.browser_type == "chrome" and self.profile_path:
+                # Hente cookies fra en angitt chrome profil
+                all_cookies = cookie_method(
+                    cookie_file=os.path.join(self.profile_path, "Cookies")
+                )
+            else:
+                # Hente cookies fra default nettleserprofil
+                all_cookies = cookie_method()
         url_cookies = [
             cookie for cookie in all_cookies if cookie.domain in self.base_url.host
         ]

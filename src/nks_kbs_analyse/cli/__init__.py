@@ -1,4 +1,4 @@
-"""Kommandolinjeverktøy for å jobbe med NKS VDB og NKS KBS."""
+"""Kommandolinjeverktøy for å jobbe med NAVNO VDB, NKS VDB og NKS KBS."""
 
 from functools import cache
 from typing import cast
@@ -16,6 +16,10 @@ def get_auth(url: str) -> BrowserSessionAuthentication:
     """Hjelpemetode for å hente autentiseringsobjekt."""
     import os
 
+    from pydantic import HttpUrl
+
     return BrowserSessionAuthentication(
-        url, browser=cast(BrowserType, os.getenv("BROWSER"))
+        HttpUrl(url),
+        browser=cast(BrowserType, os.getenv("BROWSER")),
+        profile_path=os.getenv("PROFILE_PATH"),
     )

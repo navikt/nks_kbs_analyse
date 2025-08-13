@@ -6,7 +6,6 @@ from typing import cast
 import httpx
 import pytest
 from pydantic import HttpUrl
-from pydantic_core import Url
 
 from nks_kbs_analyse.auth import BrowserSessionAuthentication, BrowserType
 
@@ -15,14 +14,16 @@ from nks_kbs_analyse.auth import BrowserSessionAuthentication, BrowserType
 @pytest.mark.parametrize(
     "url",
     [
-        Url("https://nks-vdb.ansatt.dev.nav.no"),
-        Url("https://nks-kbs.ansatt.dev.nav.no"),
+        HttpUrl("https://nks-vdb.ansatt.dev.nav.no"),
+        HttpUrl("https://nks-kbs.ansatt.dev.nav.no"),
     ],
 )
 def test_authentication(url: HttpUrl) -> None:
     """Sjekk at autentisering fungerer."""
     auth = BrowserSessionAuthentication(
-        base_url=url, browser=cast(BrowserType, os.getenv("BROWSER"))
+        base_url=url,
+        browser=cast(BrowserType, os.getenv("BROWSER")),
+        profile_path=os.getenv("PROFILE_PATH"),
     )
     cookie = auth.get_cookie()
     print(cookie)
@@ -44,8 +45,9 @@ def test_vector_search() -> None:
     """Sjekk at kall til `/api/v1/search` fungerer med autentisering."""
     base_url = "https://nks-vdb.ansatt.dev.nav.no"
     auth = BrowserSessionAuthentication(
-        base_url=base_url,
+        base_url=HttpUrl(base_url),
         browser=cast(BrowserType, os.getenv("BROWSER")),
+        profile_path=os.getenv("PROFILE_PATH"),
     )
     response = httpx.get(
         base_url + "/api/v1/search",

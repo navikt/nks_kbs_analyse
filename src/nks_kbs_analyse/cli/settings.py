@@ -1,5 +1,7 @@
 """Innstillinger fra miljøvariabler."""
 
+from typing import Annotated
+
 from pydantic import Field, HttpUrl
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
@@ -15,10 +17,13 @@ class Settings(BaseSettings):
         extra="ignore",
     )
 
-    vdb_url: HttpUrl = Field("https://nks-vdb.ansatt.dev.nav.no")
+    vdb_url: Annotated[HttpUrl, Field("https://nks-vdb.ansatt.dev.nav.no")]
     """URL til NKS-VDB tjenesten"""
 
-    kbs_url: HttpUrl = Field("https://nks-kbs.ansatt.dev.nav.no")
+    navno_vdb_url: Annotated[HttpUrl, Field("https://navno-vdb.ansatt.dev.nav.no")]
+    """URL til NKS-VDB tjenesten"""
+
+    kbs_url: Annotated[HttpUrl, Field("https://nks-kbs.ansatt.dev.nav.no")]
     """URL til NKS-KBS tjenesten"""
 
 

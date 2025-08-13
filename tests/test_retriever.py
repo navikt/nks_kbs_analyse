@@ -4,7 +4,7 @@ import os
 from typing import cast
 
 import pytest
-from pydantic_core import Url
+from pydantic import HttpUrl
 from pytest_benchmark.fixture import BenchmarkFixture
 
 from nks_kbs_analyse.auth import BrowserSessionAuthentication, BrowserType
@@ -15,8 +15,9 @@ from nks_kbs_analyse.retriever import NKSRetriever
 def retriever() -> NKSRetriever:
     """Hjelpemetode for å lage en retriever for tester."""
     auth = BrowserSessionAuthentication(
-        Url("https://nks-vdb.ansatt.dev.nav.no"),
-        cast(BrowserType, os.getenv("BROWSER")),
+        HttpUrl("https://nks-vdb.ansatt.dev.nav.no"),
+        browser=cast(BrowserType, os.getenv("BROWSER")),
+        profile_path=os.getenv("PROFILE_PATH"),
     )
     return NKSRetriever(auth=auth)
 
