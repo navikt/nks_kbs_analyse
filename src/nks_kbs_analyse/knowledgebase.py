@@ -71,6 +71,10 @@ METADATA_MAPPING: dict[str, dict[str, str]] = {
         Tab="Lege og behandler",
         Fragment="samh-mer-informasjon",
     ),
+    # Question & Answer
+    "Question_and_Answer__c": dict(
+        Section="Spørsmål og svar", Tab="Spørsmål og svar", Fragment="spm-og-svar"
+    ),
     # Other
     "NKS_Nav_no__c": dict(Section="nav.no", Tab="Annen"),
     "NKS_Legislation__c": dict(Section="Lovverk", Tab="Annen"),
